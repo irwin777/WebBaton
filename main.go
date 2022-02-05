@@ -10,13 +10,11 @@ import (
 	"time"
 )
 
-
 type batons = struct {
 	sync.Mutex
 	pin string
 	lpt time.Time
 }
-
 
 const (
 	pin1     = "2"
