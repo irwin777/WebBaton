@@ -10,11 +10,13 @@ import (
 	"time"
 )
 
+
 type batons = struct {
 	sync.Mutex
 	pin string
 	lpt time.Time
 }
+
 
 const (
 	pin1     = "2"
@@ -103,7 +105,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Sorry, only GET and POST methods are supported.")
 	}
 }
-
 
 func main() {
 	initbat()
